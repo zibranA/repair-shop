@@ -1,4 +1,5 @@
-import { Phone } from "lucide-react";
+import NavButton from "@/components/NavButton";
+import { HomeIcon, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -78,6 +79,7 @@ export default function Home() {
               <Phone size={15} />
               <Link href={"tel:5555-5555-555"}>555-555-5555</Link>
             </div>
+              <NavButton icon={HomeIcon} href="/home" label="Home" />
           </div>
         </main>
       </div>
