@@ -1,6 +1,7 @@
 import { File, HomeIcon, UserRound } from "lucide-react";
 import NavButton from "./NavButton";
 import Link from "next/link";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export default function Header() {
   return (
@@ -19,6 +20,7 @@ export default function Header() {
         <div className="flex items-center">
           <NavButton href="/tickets" label="Tickets" icon={File} />
           <NavButton href="/customers" label="Customers" icon={UserRound} />
+          <ThemeSwitcher />
         </div>
       </div>
     </header>

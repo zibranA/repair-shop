@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export default async function RSLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="bg-violet-950 h-dvh text-white">
+    <div className="h-dvh">
       <Header />
       {children}
     </div>
