@@ -1,7 +1,9 @@
-import { File, HomeIcon, UserRound } from "lucide-react";
+import { File, HomeIcon, LogOutIcon, UserRound } from "lucide-react";
 import NavButton from "./NavButton";
 import Link from "next/link";
 import { ThemeSwitcher } from "./theme-switcher";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";
+import { Button } from "./ui/button";
 
 export default function Header() {
   return (
@@ -14,13 +16,20 @@ export default function Header() {
             className="flex justify-center items-center gap-2 ml-0"
             title="Home"
           >
-            <h1 className="hidden sm:block text-xl font-bold m-0">Dans Repair Shop</h1>
+            <h1 className="hidden sm:block text-xl font-bold m-0">
+              Dans Repair Shop
+            </h1>
           </Link>
         </div>
         <div className="flex items-center">
           <NavButton href="/tickets" label="Tickets" icon={File} />
           <NavButton href="/customers" label="Customers" icon={UserRound} />
           <ThemeSwitcher />
+          <Button size="icon" variant="ghost" asChild>
+            <LogoutLink>
+              <LogOutIcon />
+            </LogoutLink>
+          </Button>
         </div>
       </div>
     </header>
