@@ -31,7 +31,7 @@ export const customers = pgTable("customers", {
 
 export const tickets = pgTable("tickets", {
   id: serial("id").primaryKey(),
-  customerId: integer("id")
+  customerId: integer("customer_id")
     .notNull()
     .references(() => customers.id),
   title: varchar("title").notNull(),

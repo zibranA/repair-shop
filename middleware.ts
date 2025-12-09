@@ -7,7 +7,7 @@ export default withAuth(
   },
   {
     // Middleware still runs on all routes, but doesn't protect the blog route
-    publicPaths: ["/"],
+    publicPaths: ["/", "/customers/form", "/customers/form/:path*"],
   }
 );
 

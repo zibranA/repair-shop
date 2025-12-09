@@ -1,5 +1,5 @@
 {
-  "id": "2335ff2d-dab7-4c8c-8cb2-0d9327db17b4",
+  "id": "40991664-64d8-4266-9fb6-980a5884ea80",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -125,6 +125,12 @@
       "columns": {
         "id": {
           "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "customer_id": {
+          "name": "customer_id",
           "type": "integer",
           "primaryKey": false,
           "notNull": true
@@ -172,12 +178,12 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "tickets_id_customers_id_fk": {
-          "name": "tickets_id_customers_id_fk",
+        "tickets_customer_id_customers_id_fk": {
+          "name": "tickets_customer_id_customers_id_fk",
           "tableFrom": "tickets",
           "tableTo": "customers",
           "columnsFrom": [
-            "id"
+            "customer_id"
           ],
           "columnsTo": [
             "id"
